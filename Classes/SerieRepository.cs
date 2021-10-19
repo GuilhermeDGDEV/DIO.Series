@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using DIO.Series.Interfaces;
+using System.Linq;
 
 namespace DIO.Series
 {
@@ -9,7 +10,7 @@ namespace DIO.Series
 
         public List<Serie> Lista()
         {
-            return listaSerie;
+            return listaSerie.Where(serie => serie.GetAtivo()).ToList();
         }
 
         public Serie RetornoPorId(int id)

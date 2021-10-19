@@ -27,6 +27,7 @@ namespace DIO.Series
             retorno += "Título: " + this.Titulo + Environment.NewLine;
             retorno += "Descrição: " + this.Descricao + Environment.NewLine;
             retorno += "Ano de Lançamento: " + this.Ano.ToString() + Environment.NewLine;
+            retorno += "Ativo: " + this.Ativo;
             return retorno;
         }
 
@@ -35,7 +36,7 @@ namespace DIO.Series
             return this.Titulo;
         }
 
-        public int RetornId()
+        public int RetornaId()
         {
             return this.Id;
         }
@@ -43,6 +44,11 @@ namespace DIO.Series
         public void Exclui()
         {
             this.Ativo = false;
+        }
+
+        public bool GetAtivo()
+        {
+            return this.Ativo;
         }
     }
 }
